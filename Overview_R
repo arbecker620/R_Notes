@@ -1,0 +1,15 @@
+setwd('/Users/andrewbecker/Documents/Datasets/Bank Churners')
+
+data <- read.csv('BankChurners.csv')
+
+
+F_Client <- subset(data, Gender=='F' )
+
+
+F_avg_age <- mean(F_Client$Customer_Age)
+
+
+hist(F_Client$Customer_Age,main = 'Histograms of Female Ages',xlab = "Age",col = "yellow",border = "blue")
+#F_Client$Years <- F_Client$Months_on_book/12
+
+hist(F_Client$Months_on_book,main = 'Months',xlab = "Months",col = "yellow",border = "blue")
