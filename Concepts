@@ -1,0 +1,47 @@
+
+library(dplyr)
+#convert to Farenhiet
+
+c <- 0
+f<- 32 + ((9/5) * c)
+print(f)
+
+
+#print mtcars
+print(mtcars)
+
+#manipulate a dataframe
+cars <- mtcars
+cars$DisplacementPerCylinder <- cars$disp / cars$cyl
+
+cars$gpm <- 1/cars$mpg
+#df <- subset(cars$mpg > 25)
+
+df<-cars[cars$mpg>mean(cars$mpg), ]
+#subset(data, Var1>10)
+print(cars)
+print(df)
+33000002    print(cars[1:8])
+
+
+
+# average a list
+test <- c(42,70,64,47,66) 
+mean(test)
+
+
+
+# create a dataframe
+
+x <- c('Supermarket', 'Fountain', 'Gas', 'Vending', 'Mass Merchandiser', 'DrugStores')
+y <- c(44,24,16,11,3,2)
+
+#aggregate data
+total <- data.frame(x,y)
+print(total)
+
+total$percent <- total$y/sum(y)
+
+print(total)
+
+sum(total$y)
